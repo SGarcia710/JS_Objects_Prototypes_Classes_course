@@ -15,7 +15,16 @@
     get() {
       return this.name.first + " " + this.name.last;
     },
+    set(value) {
+      var nameParts = value.split(" ");
+      this.name.first = nameParts[0];
+      this.name.last = nameParts[1];
+    },
   });
 
   console.log(person.fullName);
+  person.fullName = "Sebastián García";
+  console.log(
+    "First Name: " + person.name.first + ", Last Name: " + person.name.last
+  );
 })();
