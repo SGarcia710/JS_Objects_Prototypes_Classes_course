@@ -34,6 +34,11 @@
   // We need this line after creating the chain, because after doing the last instruction, the Student's constructor will be the Person's one. So, to undo that side effect, we just set it back to the Student's one.
   Student.prototype.constructor = Student;
 
+  // Creating static function for a Constructor Function:
+  Student.fromPerson = function (person) {
+    return new Student(person.firstName, person.lastName, person.age);
+  };
+
   let jim = new Student("Jim", "Cooper", 29);
 
   jim.enroll("CS205");

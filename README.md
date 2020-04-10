@@ -21,6 +21,7 @@ nodemon Class-1
 
 - Const
 - Destructuring
+- Classes: ES6 - Chrome, Edge and Firefox
 
 ##Creating and Using JavaScript Objects
 
@@ -84,3 +85,26 @@ firstName1 == firstName2; // True
 firstName1 === firstName2; // True
 Object.is(firstName1, firstName2); // True
 ```
+
+###Prototypes
+A prototype, whether its a function's prototype or an object's prototype, is actually an instance of an object in memory. So when a function is created, a new prototype object is created in memory an attached to the function behind the scenes. If that function is then used as a constructor function with the new keyword, the new object that is created has a proto property that is pointing to the same object in memory that is the function's prototype.
+####Function's prototype
+A function's prototype is the object instance that will become the prototype for all objects created using this function as a constructor.
+####Object's prototype
+An object's prototype is the object instance from wich the object is inherited.
+####Prototype Chain
+By default, all objects in JavaScript inherit from Object, and object has no prototype.
+
+###Classes
+Classes play the exact same role as constructor functions. They are templates for creating objects and encapsulating logic related for those objects.
+
+Basically anything we can do with constructor functions we can do with classes. In fact, classes are really just syntactic sugar for a cleaner way to do all of this, and its important to understand classes dont really do anything new including inheritance. The end result is the same, including using prototypes for inheritance behind the scenes.
+
+Classes just offer a little cleaner syntax to accomplish it.
+
+- Using classes for create classes
+- Properties
+- Methods
+- Getters and setters
+- Inheritance
+- Creating inheritance chain

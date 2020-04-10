@@ -1,16 +1,18 @@
-// Using Inheritance with Javascript Classes
+// Using Static Properties and Methods
 "use strict";
 
 (() => {
+  // Static properties and methods are items you can access on a Class without having to create an Instance from that class
   class Person {
     constructor(firstName, lastName, age) {
       this.firstName = firstName;
       this.lastName = lastName;
       this.age = age;
     }
+    static adultAge = 18;
 
     isAdult() {
-      return this.age >= 18;
+      return this.age >= this.adultAge;
     }
 
     get fullName() {
@@ -28,6 +30,10 @@
       super(firstName, lastName, age);
       this._enrolledCourses = [];
     }
+
+    static fromPerson(person) {
+      return new Student(person.firstName, person.lastName, person.age);
+    }
     enroll(courseId) {
       this._enrolledCourses.push(courseId);
     }
@@ -40,9 +46,10 @@
     }
   }
 
-  let sebastian = new Student("Sebastián", "García", 23);
-  sebastian.enroll("CS101");
-  sebastian.enroll("MA101");
-  sebastian.enroll("PS204");
-  console.log(sebastian.getCourses());
+  let sebastian = new Person("Sebastián", "García", 23);
+
+  let sebastianStudent = Student.fromPerson(sebastian);
+
+  console.log(sebastian);
+  console.log(sebastianStudent);
 })();
