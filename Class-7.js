@@ -7,7 +7,7 @@
     lastName: "Cooper",
     age: 29,
   };
-
+  // Object.create receives as first parameter the prototype for the object and as second parameter the properties for the instance (The second is optional)
   let person2 = Object.create(Object.prototype, {
     firstName: {
       value: "Sebastián",
