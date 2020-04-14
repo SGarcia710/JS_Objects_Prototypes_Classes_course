@@ -1,7 +1,7 @@
-#About this repo
+# About this repo
 This repo contains my notes and examples from: [JavaScript Objects, Prototypes, and Classes](https://app.pluralsight.com/library/courses/javascript-objects-prototypes-classes/table-of-contents) By Jim Cooper
 
-#How to
+# How to
 You can run every .js using nodemon.
 
 ```
@@ -9,7 +9,7 @@ npm i -g nodemon
 nodemon Class-1
 ```
 
-##Facts
+## Facts
 
 - Arrow Function's scope is the general scope.
 - Function's scope is the parent scope.
@@ -17,13 +17,13 @@ nodemon Class-1
 - JavaScript has Dyamic nature.
 - NaN: Not a number. It is the result of a non-numeric mathematical equation. Example `1 / 'A'`
 
-##ES Things
+## ES Things
 
 - Const
 - Destructuring
 - Classes: ES6 - Chrome, Edge and Firefox
 
-##Creating and Using JavaScript Objects
+## Creating and Using JavaScript Objects
 
 - Object Literals: Object Equality
 - Constructor Functions: Merging properties
@@ -31,7 +31,7 @@ nodemon Class-1
 - `'use strict';`: This piece of code enforces cleanner code.
 - Self-executing function
 
-###JavaScript Equality Operators
+### JavaScript Equality Operators
 
 - `==` Should be avoided. Useful only in rare cases. Becase it not type-safe. Example:
 
@@ -57,7 +57,7 @@ NaN === NaN; // True
 +0 === -0; // False
 ```
 
-###How Equality works for Objects:
+### How Equality works for Objects:
 
 ```
 let person1 = {
@@ -86,16 +86,16 @@ firstName1 === firstName2; // True
 Object.is(firstName1, firstName2); // True
 ```
 
-###Prototypes
+### Prototypes
 A prototype, whether its a function's prototype or an object's prototype, is actually an instance of an object in memory. So when a function is created, a new prototype object is created in memory an attached to the function behind the scenes. If that function is then used as a constructor function with the new keyword, the new object that is created has a proto property that is pointing to the same object in memory that is the function's prototype.
-####Function's prototype
+#### Function's prototype
 A function's prototype is the object instance that will become the prototype for all objects created using this function as a constructor.
-####Object's prototype
+#### Object's prototype
 An object's prototype is the object instance from wich the object is inherited.
-####Prototype Chain
+#### Prototype Chain
 By default, all objects in JavaScript inherit from Object, and object has no prototype.
 
-###Classes
+### Classes
 Classes play the exact same role as constructor functions. They are templates for creating objects and encapsulating logic related for those objects.
 
 Basically anything we can do with constructor functions we can do with classes. In fact, classes are really just syntactic sugar for a cleaner way to do all of this, and its important to understand classes dont really do anything new including inheritance. The end result is the same, including using prototypes for inheritance behind the scenes.
